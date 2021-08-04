@@ -1,28 +1,33 @@
+# Declare updater_app domain
 type updater_app, domain, coredomain;
 
 app_domain(updater_app)
+
+# Allow updater app access to the network
 net_domain(updater_app)
 
-binder_call(updater_app, gpuservice)
-binder_call(updater_app, update_engine)
-
-allow updater_app app_api_service:service_manager find;
-allow updater_app recovery_service:service_manager find;
-allow updater_app system_api_service:service_manager find;
+# Allow finding various services needed for our updater app
+allow updater_app activity_service:service_manager find;
+allow updater_app activity_task_service:service_manager find;
+allow updater_app audio_service:service_manager find;
+allow updater_app autofill_service:service_manager find;
+allow updater_app gpu_service:service_manager find;
+allow updater_app surfaceflinger_service:service_manager find;
+allow updater_app tethering_service:service_manager find;
+allow updater_app thermal_service:service_manager find;
 allow updater_app update_engine_service:service_manager find;
 
-allow updater_app app_data_file:dir create_dir_perms;
-allow updater_app app_data_file:{ file lnk_file } create_file_perms;
+# Allow binder IPC with update_engine and gpuservice
+binder_call(updater_app, update_engine)
+binder_call(updater_app, gpuservice)
 
-allow updater_app cache_file:dir r_dir_perms;
+# Allow updater app to write to cgroup
+allow updater_app cgroup:file w_file_perms;
 
-allow updater_app cache_recovery_file:dir rw_dir_perms;
-allow updater_app cache_recovery_file:file create_file_perms;
+# Allow updater app full access to system_app_data_file
+allow updater_app system_app_data_file:dir create_dir_perms;
+allow updater_app system_app_data_file:file create_file_perms;
 
-allow updater_app ota_package_file:dir create_dir_perms;
-allow updater_app ota_package_file:file create_file_perms;
-
-get_prop(updater_app, default_prop)
-get_prop(updater_app, exported2_default_prop)
-
-set_prop(updater_app, recovery_update_prop)
+# Allow updater app full access to updater_ota_file
+allow updater_app updater_ota_file:dir create_dir_perms;
+allow updater_app updater_ota_file:file create_file_perms;

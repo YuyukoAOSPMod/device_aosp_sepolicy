@@ -24,3 +24,6 @@
 
 # Bash
 /system/xbin/bash          u:object_r:shell_exec:s0
+
+# ota package dir and files
+/data/kosp_ota(/.*)?            u:object_r:updater_ota_file:s0
