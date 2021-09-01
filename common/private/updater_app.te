@@ -12,6 +12,7 @@ allow updater_app activity_task_service:service_manager find;
 allow updater_app audio_service:service_manager find;
 allow updater_app autofill_service:service_manager find;
 allow updater_app batterystats_service:service_manager find;
+allow updater_app batteryproperties_service:service_manager find;
 allow updater_app gpu_service:service_manager find;
 allow updater_app surfaceflinger_service:service_manager find;
 allow updater_app tethering_service:service_manager find;
