@@ -10,5 +10,12 @@ hal_client_domain(system_server, hal_lineage_touch)
 hal_client_domain(system_server, hal_lineage_trust)
 hal_client_domain(system_server, hal_lineage_powershare)
 
-# allow system_server to look into theme resources
-allow system_server theme_data_file:dir search;
+# theme property
+get_prop(system_server, theme_prop)
+set_prop(system_server, theme_prop)
+
+allow system_server dufont_service:service_manager find;
+
+# Allow access theme data files
+allow system_server theme_data_file:dir { create_dir_perms relabelto rw_dir_perms };
+allow system_server theme_data_file:file { create_file_perms relabelto rw_file_perms };
