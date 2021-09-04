@@ -30,3 +30,6 @@
 
 # FOD resources dir
 /data/system/fod(/.*)?          u:object_r:fod_res_file:s0
+
+# Themes data
+/data/system/theme(/.*)?    u:object_r:theme_data_file:s0

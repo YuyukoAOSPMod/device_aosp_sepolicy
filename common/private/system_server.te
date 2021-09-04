@@ -9,3 +9,6 @@ hal_client_domain(system_server, hal_lineage_livedisplay)
 hal_client_domain(system_server, hal_lineage_touch)
 hal_client_domain(system_server, hal_lineage_trust)
 hal_client_domain(system_server, hal_lineage_powershare)
+
+# allow system_server to look into theme resources
+allow system_server theme_data_file:dir search;
