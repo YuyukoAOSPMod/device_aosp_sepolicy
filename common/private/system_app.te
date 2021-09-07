@@ -19,3 +19,7 @@ allow system_app fod_res_file:file create_file_perms;
 
 # /data/system access
 allow system_app system_data_file:file r_file_perms;
+
+# /data/cache access
+allow system_app cache_file:dir create_dir_perms;
+allow system_app cache_file:file create_file_perms;
