@@ -10,10 +10,6 @@ hal_client_domain(system_server, hal_lineage_touch)
 hal_client_domain(system_server, hal_lineage_trust)
 hal_client_domain(system_server, hal_lineage_powershare)
 
-# theme property
-get_prop(system_server, theme_prop)
-set_prop(system_server, theme_prop)
-
 allow system_server dufont_service:service_manager find;
 
 # Allow access theme data files
