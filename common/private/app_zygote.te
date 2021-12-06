@@ -1,3 +1,0 @@
-# Themes
-allow app_zygote theme_data_file:file r_file_perms;
-allow app_zygote theme_data_file:dir r_dir_perms;

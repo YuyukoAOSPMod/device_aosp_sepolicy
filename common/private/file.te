@@ -2,9 +2,3 @@ type adbroot_data_file, file_type, data_file_type, core_data_file_type;
 
 # Define updater_ota_file type
 type updater_ota_file, file_type, data_file_type, core_data_file_type, mlstrustedobject;
-
-# FOD resources dir
-type fod_res_file, file_type, data_file_type, core_data_file_type;
-
-# Themes
-type theme_data_file, file_type, data_file_type, core_data_file_type;

@@ -6,17 +6,5 @@ allow system_app cache_recovery_file:file {create rw_file_perms};
 get_prop(system_app, vendor_security_patch_level_prop)
 
 # Allow access to the HALs
-hal_client_domain(system_app, hal_lineage_fastcharge)
 hal_client_domain(system_app, hal_lineage_livedisplay)
 hal_client_domain(system_app, hal_lineage_touch)
-
-# Grant Settings app full access to FOD resources
-allow system_app fod_res_file:dir create_dir_perms;
-allow system_app fod_res_file:file create_file_perms;
-
-# /data/system access
-allow system_app system_data_file:file r_file_perms;
-
-# /data/cache access
-allow system_app cache_file:dir create_dir_perms;
-allow system_app cache_file:file create_file_perms;
