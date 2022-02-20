@@ -4,3 +4,8 @@
 
 # ota package dir and files
 /data/kosp_ota(/.*)?            u:object_r:updater_ota_file:s0
+
+# Postinstall
+/system/bin/backuptool_ab\.functions              u:object_r:otapreopt_chroot_exec:s0
+/system/bin/backuptool_ab\.sh                     u:object_r:otapreopt_chroot_exec:s0
+/system/bin/backuptool_postinstall\.sh            u:object_r:otapreopt_chroot_exec:s0
