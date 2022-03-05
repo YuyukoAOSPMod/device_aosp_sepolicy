@@ -13,6 +13,7 @@ allow updater_app audio_service:service_manager find;
 allow updater_app autofill_service:service_manager find;
 allow updater_app batterystats_service:service_manager find;
 allow updater_app batteryproperties_service:service_manager find;
+allow updater_app clipboard_service:service_manager find;
 allow updater_app content_capture_service:service_manager find;
 allow updater_app game_service:service_manager find;
 allow updater_app gpu_service:service_manager find;
