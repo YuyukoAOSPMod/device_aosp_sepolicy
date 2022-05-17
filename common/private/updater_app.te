@@ -19,6 +19,7 @@ allow updater_app game_service:service_manager find;
 allow updater_app gpu_service:service_manager find;
 allow updater_app hint_service:service_manager find;
 allow updater_app media_session_service:service_manager find;
+allow updater_app recovery_service:service_manager find;
 allow updater_app surfaceflinger_service:service_manager find;
 allow updater_app system_update_service:service_manager find;
 allow updater_app tethering_service:service_manager find;
