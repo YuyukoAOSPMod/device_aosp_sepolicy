@@ -3,7 +3,7 @@
 /data/adbroot(/.*)?        u:object_r:adbroot_data_file:s0
 
 # ota package dir and files
-/data/kosp_ota(/.*)?            u:object_r:updater_ota_file:s0
+/data/flamingo_ota(/.*)?            u:object_r:updater_ota_file:s0
 
 # Postinstall
 /system/bin/backuptool_ab\.functions              u:object_r:otapreopt_chroot_exec:s0
