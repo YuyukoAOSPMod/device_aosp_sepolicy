@@ -27,7 +27,7 @@ allow updater_app thermal_service:service_manager find;
 allow updater_app update_engine_service:service_manager find;
 allow updater_app updatelock_service:service_manager find;
 allow updater_app uri_grants_service:service_manager find;
-allow updater_app vendor_perf_service:service_manager find;
+# allow updater_app vendor_perf_service:service_manager find;
 
 # Allow binder IPC with update_engine and gpuservice
 binder_call(updater_app, update_engine)
